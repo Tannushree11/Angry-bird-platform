@@ -11,6 +11,7 @@ var bird, slingshot;
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
 var score = 0;
+var platform;
 
 function preload() {
     getBackgroundImg();
@@ -23,6 +24,7 @@ function setup(){
 
 
     ground = new Ground(600,height,1200,20);
+    // Create platform
     platform = new Ground(150, 305, 300, 170);
 
     box1 = new Box(700,320,70,70);
@@ -60,6 +62,7 @@ function draw(){
     box1.display();
     box2.display();
     ground.display();
+    platform.display();
     pig1.display();
     pig1.score();
     log1.display();
@@ -75,7 +78,7 @@ function draw(){
     log5.display();
 
     bird.display();
-    platform.display();
+    //platform.display();
     //log6.display();
     slingshot.display();    
 }
